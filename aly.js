@@ -1,52 +1,28 @@
 function myFunction() {
-    var d = new Date();
-    var n = d.getFullYear();
-    document.getElementById("demo").innerHTML = n;
-    } myFunction();
-
-
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById("demo").innerHTML = n;
+}
+myFunction();
 
 /* strat of contact */
 
-$(function () {
+$("#button-a").click(function() {
+  swal({
+    title: "tom.aly@hotmail.com"
+  });
+});
 
-   
-    
-
-    $('#contact-form').validator();
-
-
-    
-    $('#contact-form').on('submit', function (e) {
-
-        // if the validator does not prevent form submit
-        if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
-
-            // POST values in the background the the script URL
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
-
-                    // let's compose Bootstrap alert box HTML
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    
-                    // If we have messageAlert and messageText
-                    if (messageAlert && messageText) {
-                        // inject the alert to .messages div in our form
-                        $('#contact-form').find('.messages').html(alertBox);
-                        // empty the form
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
-        }
-    })
+$(document).on("click", "#link", function(e) {
+  swal({
+    title: "Request a callback ",
+    confirmButtonText: "Send an Email",
+    showCancelButton: true
+  }).then(result => {
+    if (result.value) {
+      window.location = href = "mailto:tom.aly@hotmail.com";
+    } else if (result.dismiss === "cancel") {
+      swal("Maybe later ", "Thank you :)");
+    }
+  });
 });
