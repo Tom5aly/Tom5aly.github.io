@@ -14,9 +14,17 @@
 	    <link href='http://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/image.min.css" />
 	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-  
-  </style>
+	<!-- SweetAlert2 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+	<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+	<!-- REACT LIBRARY -->
+     	<script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+	<!-- REACT DOM LIBRARY -->
+			<script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+	<!-- BABEL LIBRARY -->
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
 </head>
 	
 <body >
@@ -30,8 +38,8 @@
 		<div class="row">
 			<div class="col-sm">
 				<strong style="font-style: normal;" > Tamer Aly </strong>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i>
-				tom.aly@hotmail.com
+				<a class="fa fa-envelope-o" aria-hidden="true" href="mailto:tom.aly@hotmail.com&subject=New%20IQURY">
+				tom.aly@hotmail.com</a>
 			</div>
 			<div class="col-sm-3">
 				<strong style="font-style: normal">Lets work togther </strong>
@@ -66,8 +74,8 @@
 		<li class="nav-item">
         <a class="nav-link" href="#WhoI">about me</a>
       </li>
-		<li class="nav-item">
-        <a class="nav-link" href="#cont">Contact</a>
+		<li class="nav-item" >
+        <button class="nav-link" id="link" >Request call</button>
       </li>
      </ul>
    </div>
@@ -144,15 +152,18 @@ jQuery is a fast, small, and feature-rich JavaScript library. It makes things li
 	    </div>
 	</div>
 	<br><br>
-	<div class="container">
+	 <div class="container">
      <div class="row midM">
 	   <div class="col">
         <img src="image/HTML5_Badge_64.png">
         </div>
      <div class="col-6">
-      <h2>PHP</h2>
-		<P>PHP is a general-purpose scripting language that is especially suited to server-side web development, in which case PHP generally runs on a web server. Any PHP code in a requested file is executed by the PHP runtime, usually to create dynamic web page content or dynamic images used on websites or elsewhere.</P>
-     </div>
+      <h2>React</h2>
+		<P>React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual
+		developers and companies. React can be used as a base in the development of single-page or mobile applications.</P>
+	<hr>	 
+	</div>
+		 
           <div id="WhoI"></div>
 	  <div class="col">
      <img src="image/HTML5_Badge_64.png">
@@ -164,8 +175,9 @@ jQuery is a fast, small, and feature-rich JavaScript library. It makes things li
 	<!--start Of the threed-->
 	<div class="container text-center threed">
 		<br><br>
-		<h2>Who I am</h2>
-		<p>My name is<strong style="font-family:sans-serif;
+		<h2 >Who I am</h2>
+		<p id="whoIAm"></p>
+		<!-- <p>My name is<strong style="font-family:sans-serif;
 	color:#ec1c23; text-decoration: none;">Tamer Aly </strong>and I`m a sales executive and business developer working in the emerging markets. <br>
 
 I originally started coding and design as a hobby.Over the last year, I have been studying web development skills in order to make me a better designer.and of course, my design background has made me a better developer.<br>
@@ -174,55 +186,38 @@ Also, my previous employment and management experience provide me with leadershi
 <br>
 		<i>I always make sure of:</i><br>
 Satisfying customers needs and providing the best user experience.<br>
-Getting the job done no matter what is the circumstances.</p>
+Getting the job done no matter what is the circumstances.</p> -->
 	
-	
+		<hr>
 	</div>
      <div id="cont"></div>
 	
 	<br>
 	<br>
 	<br>
-	
+
 	<!--End Of the threed-->
 	
-	<!-- Start of Cntact -->
+	<!-- Start of Video -->
 	
 	<div class="container text-center cont">
-		<h2>Contact Me</h2>
-	<div class="row">
-		<form role="form" id="contact-form" class="contact-form col">
-                    <div class="row">
-                		<div class="col-md-6">
-                  		<div class="form-group">
-                            <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
-                  		</div>
-                  	</div>
-                    	<div class="col-md-6">
-                  		<div class="form-group">
-                            <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
-                  		</div>
-                  	</div>
-                  	</div>
-                  	<div class="row">
-                  		<div class="col-md-12">
-                  		<div class="form-group">
-                            <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
-                  		</div>
-                  	   </div>
-                    </div>
-                  <div class="row">
-                  <div class="col-md-12">
-                  <button type="submit" class="btn main-btn pull-right">Send a message</button>
-                  </div>
-                    </div>
-                       </form>
-	          </div>
-                 </div>
+		
+		<form >
+			<div>
+			<h4 class="cont"><i class="fa fa-quote-left" aria-hidden="true"></i> let's dive into the world of coding to design you stunning website.<i class="fa fa-quote-right" aria-hidden="true"></i></h4>
+			
+			</div>
+		<video autoplay muted loop id="myVideo">
+			<source src="http://thenewcode.com/assets/videos/ocean-diver.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+		</form>
+	
+                 
 	<br>
 	<br>
 	
-	 <!-- End of Cntact -->
+	 <!-- End of Video -->
 	
 	
 	
@@ -240,7 +235,31 @@ Getting the job done no matter what is the circumstances.</p>
  
 <a href="https://www.linkedin.com/in/tamer-abdelsamad-b093b591/" target="_blank" class="fa fa-linkedin w3-hover-opacity"> </a><br>
   <small> <b>Powered by Tamer Aly &copy;</b> <b id="demo"></b></small>
+ 
+		<script type="text/babel">
+		function AboutTomy() {
+			return(<div>
+	<p>My name is<strong className= "aboutTomyName"> {name} </strong> and I am a
+		 Web Developer & Designer based in Manchester. 
+		 I love crafting beautiful web pages with HTML5, CSS3 , JavaScript , jQuery and React.
+		I originally started coding and design as a hobby.
+		Over the last year, I have been studying web development skills in order to make me a better designer 
+		and of course, my design background has made me a better developer.<br/>
 
+Also, my previous employment and management experience provide me with leadership skills that allow me to effectively communicate with others to achieve our goals. 
+<br/>In addition, it has provided me with the knowledge of understanding and communicating with customers to satisfy their needs.
+<br/>
+		<i>I always :</i><br/>
+Meet customers needs and provide the best user experience..<br/>
+Getting the job done no matter what the circumstances are, is my aim.
+ You can grab my CV <a href="https://www.dropbox.com/s/t3u3hkmipl4cbyh/Tamer-Aly%20CV%20December.rtf?dl=0" target="_blank"><strong>FROM HERE</strong></a>. If you want to hire me or just to talk <a href="#">CONTACT ME</a></p>
+				</div>);
+			
+		}
+		const name = "Tamer Aly";
+		
+		ReactDOM.render(<AboutTomy/>, document.getElementById("whoIAm"));
+		</script>
 	
 		<script src="jquery-3.2.1.js" ></script>
 	        <script src="popper.js"></script>
